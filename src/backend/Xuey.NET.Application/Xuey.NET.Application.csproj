@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <NoWarn>1701;1702;1591</NoWarn>
+    <DocumentationFile>Xuey.NET.Application.xml</DocumentationFile>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="applicationsettings.json" />
+		<None Remove="Xuey.NET.Application.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="applicationsettings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xuey.NET.Core\Xuey.NET.Core.csproj" />
+  </ItemGroup>
+
+</Project>

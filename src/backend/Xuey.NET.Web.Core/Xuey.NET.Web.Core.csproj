@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <NoWarn>1701;1702;1591</NoWarn>
+    <DocumentationFile>Xuey.NET.Web.Core.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Xuey.NET.Web.Core.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xuey.NET.Application\Xuey.NET.Application.csproj" />
+    <ProjectReference Include="..\Xuey.NET.Database.Migrations\Xuey.NET.Database.Migrations.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,6 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Data Source=./Xuey.NET.db",
+    "MultiTenantConnection": "Data Source=./Xuey.NET_SaaS.db"
+  }
+}

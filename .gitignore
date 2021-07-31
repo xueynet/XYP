@@ -28,8 +28,8 @@ x86/
 bld/
 [Bb]in/
 [Oo]bj/
-[Ll]og/
 [Ll]ogs/
+[Bb]ak/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -183,6 +183,7 @@ publish/
 PublishScripts/
 
 # NuGet Packages
+.nuget/
 *.nupkg
 # NuGet Symbol Packages
 *.snupkg
@@ -348,3 +349,9 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+
+# packages
+
+node_modules/
+packages/

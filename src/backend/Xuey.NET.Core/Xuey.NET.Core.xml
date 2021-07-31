@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Xuey.NET.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Xuey.NET.Core.Entity.Car">
+            <summary>
+            车辆信息（测试通用增删查改）
+            </summary>
+        </member>
+    </members>
+</doc>
