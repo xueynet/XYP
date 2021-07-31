@@ -1,33 +1,47 @@
 <template>
-  <ConfigProvider v-bind="lockEvent" :locale="getAntdLocale">
-    <AppProvider>
-      <RouterView />
-    </AppProvider>
-  </ConfigProvider>
+  <a-config-provider :locale="locale">
+    <div id="app" class="app app1">
+      <router-view class="scrollbar"/>
+    </div>
+  </a-config-provider>
 </template>
 
-<script lang="ts">
-  import { defineComponent } from 'vue';
-  import { ConfigProvider } from 'ant-design-vue';
-  import { AppProvider } from '/@/components/Application';
+<script>
+import zhCN from 'ant-design-vue/lib/locale-provider/zh_CN'
+import { AppDeviceEnquire } from '@/utils/mixin'
 
-  import { useLockPage } from '/@/hooks/web/useLockPage';
-  import { useTitle } from '/@/hooks/web/useTitle';
-  import { useLocale } from '/@/locales/useLocale';
+export default {
+  mixins: [AppDeviceEnquire],
+  data () {
+    return {
+      locale: zhCN
+    }
+  },
+  mounted () {
 
-  export default defineComponent({
-    name: 'App',
-    components: { ConfigProvider, AppProvider },
-    setup() {
-      useTitle();
-
-      // support Multi-language
-      const { getAntdLocale } = useLocale();
-
-      // Create a lock screen monitor
-      const lockEvent = useLockPage();
-
-      return { getAntdLocale, lockEvent };
-    },
-  });
+  }
+}
 </script>
+<style>
+  .app {
+    overflow: auto;
+    border  : none;
+  }
+  .scrollbar {
+    margin: 0 auto;
+  }
+  .app1::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width : 8px;  /*高宽分别对应横竖滚动条的尺寸*/
+  }
+  .app1::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 6px;
+    background   : #aaa;
+  }
+  .app1::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    border-radius: 8px;
+    background   : #FFFFFF;
+  }
+</style>
