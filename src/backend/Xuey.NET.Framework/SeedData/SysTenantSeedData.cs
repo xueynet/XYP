@@ -18,23 +18,23 @@ namespace Xuey.NET.Framework
                 {
                     Id = 142307070918780,
                     Name = "平台开发",
-                    Email = "515096995@163.com",
+                    Email = "dev@xuey.net",
                     AdminName = "SuperAdmin",
-                    Phone = "18020030720",
+                    Phone = "13823212112",
                     Host = "",
                     Connection = "",
-                    CreatedTime = DateTime.Parse("2021-04-03 00:00:00"),
+                    CreatedTime = DateTime.Parse("2021-08-01 00:00:00"),
                 },
                 new SysTenant
                 {
                     Id = 142307070918781,
-                    Name = "公司1租户",
-                    Email = "zuohuaijun@163.com",
+                    Name = "重庆雪印网络科技有限公司",
+                    Email = "chenlian@xuey.net",
                     AdminName = "Admin",
-                    Phone = "18020030720",
-                    Host = "",
+                    Phone = "18580521798",
+                    Host = "xuey.net",
                     Connection = "",
-                    CreatedTime = DateTime.Parse("2021-04-03 00:00:00"),
+                    CreatedTime = DateTime.Parse("2021-08-01 00:00:00"),
                 }
             };
         }
