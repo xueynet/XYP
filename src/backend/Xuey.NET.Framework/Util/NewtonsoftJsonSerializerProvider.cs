@@ -18,7 +18,7 @@ namespace Xuey.NET.Framework
         /// <param name="jsonSerializerOptions"></param>
         /// <param name="inherit"></param>
         /// <returns></returns>
-        public string Serialize(object value, object jsonSerializerOptions = null, bool inherit = true)
+        public string Serialize(object value, object jsonSerializerOptions = null)
         {
             return JsonConvert.SerializeObject(value, (jsonSerializerOptions ?? GetSerializerOptions()) as JsonSerializerSettings);
         }
@@ -31,7 +31,7 @@ namespace Xuey.NET.Framework
         /// <param name="jsonSerializerOptions"></param>
         /// <param name="inherit"></param>
         /// <returns></returns>
-        public T Deserialize<T>(string json, object jsonSerializerOptions = null, bool inherit = true)
+        public T Deserialize<T>(string json, object jsonSerializerOptions = null)
         {
             return JsonConvert.DeserializeObject<T>(json, (jsonSerializerOptions ?? GetSerializerOptions()) as JsonSerializerSettings);
         }
